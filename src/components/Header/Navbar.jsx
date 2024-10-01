@@ -1,0 +1,178 @@
+// import React, { useState } from 'react';
+// import { FaAngleDown } from "react-icons/fa";
+// import logo from '../../assets/logo.avif';
+// import Joinbtn from '../Joinbtn';
+// import ProductModal from '../ModalBox/ProductModal'; // Import the Overview component
+
+// export const Navbar = () => {
+//     const [hoveredIndex, setHoveredIndex] = useState(null);
+
+//     const menuItems = [
+//         { label: 'Product' },
+//         { label: 'Pricing' },
+//         { label: 'Compare' },
+//         { label: 'Resources' },
+//         { label: 'About Us' },
+//     ];
+
+//     // Function to handle hover
+//     const handleMouseEnter = (index) => {
+//         setHoveredIndex(index);
+//     };
+
+//     const handleMouseLeave = () => {
+//         setHoveredIndex(null);
+//     };
+
+//     return (
+//         <>
+//             <div className='bg-white flex justify-around h-14 border items-center shadow-gray-500 sticky top-0'>
+//                 <div id='logo' className='text-xl font-black'>
+//                     <img src={logo} alt="Logo" />
+//                 </div>
+//                 <div id='navmenu' className='flex list-none gap-8 text-gray-500 text-base font-semibold sm:flex-row'>
+//                     {menuItems.map((item, index) => (
+//                         <div
+//                             key={index}
+//                             className='relative' // Make the parent relative for absolute positioning
+//                             onMouseEnter={() => handleMouseEnter(index)}
+//                             onMouseLeave={handleMouseLeave}
+//                         >
+//                             <li className='flex items-center hover:cursor-pointer'>
+//                                 {item.label}
+//                                 {/* Conditionally render the FaAngleDown icon only for 'Product', 'Resources', and 'About Us' */}
+//                                 {(item.label === 'Product' || item.label === 'Resources' || item.label === 'About Us') && (
+//                                     <span className={`transition-transform duration-300 ${hoveredIndex === index ? 'rotate-180' : 'rotate-0'}`}>
+//                                         <FaAngleDown />
+//                                     </span>
+//                                 )}
+//                             </li>
+
+//                             {/* Conditionally render the ProductModal component when hovering over the "Product" item */}
+//                             {item.label === 'Product' && hoveredIndex === index && (
+//                                 <div
+//                                     className="absolute top-full left-0 w-full shadow-lg z-10"
+//                                 >
+//                                     <ProductModal />
+//                                 </div>
+//                             )}
+//                         </div>
+//                     ))}
+//                 </div>
+//                 <div>
+//                     <Joinbtn />
+//                 </div>
+//             </div>
+//         </>
+//     );
+// };
+
+// export default Navbar;
+
+
+import React, { useState } from 'react';
+import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
+import logo from '../../assets/logo.png';
+import Joinbtn from '../Joinbtn';
+import ProductModal from '../ModalBox/ProductModal';
+import ResourcesModal from '../ModalBox/ResourcesModal';
+import { Link } from 'react-router-dom';
+
+export const Navbar = () => {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const menuItems = [
+        { label: 'Product' },
+        { label: 'Pricing', path: '/pricing' }, // Added path for Pricing
+        { label: 'Compare', path: '/compare' }, // Added path for Compare
+        { label: 'Resources' },
+        { label: 'About Us' },
+    ];
+
+    const handleMouseEnter = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredIndex(null);
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
+        <>
+            <div className='bg-white flex justify-between md:justify-around h-24 border items-center shadow-gray-500 sticky top-0 z-50 px-4'>
+                <Link to='/'>
+                    <div id='logo' className='text-xl font-black'>
+                        <img src={logo} alt="Logo" className='w-auto h-20 object-contain' />
+                    </div>
+                </Link>
+
+                <div className='md:hidden flex items-center'>
+                    <button onClick={toggleMenu}>
+                        {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                    </button>
+                </div>
+
+                <div
+                    id='navmenu'
+                    className={`${isMenuOpen ? 'flex' : 'hidden'
+                        } md:flex flex-col md:flex-row list-none gap-4 md:gap-8 text-gray-500 text-base font-semibold sm:flex-row absolute md:relative top-14 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none md:top-0`}
+                >
+                    {menuItems.map((item, index) => (
+                        <div
+                            key={index}
+                            className='relative'
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <li className='flex items-center hover:cursor-pointer p-4 md:p-0'>
+                                {item.path ? (
+                                    <Link to={item.path} className='flex items-center'>
+                                        {item.label}
+                                        {(item.label === 'Product' || item.label === 'Resources' || item.label === 'About Us') && (
+                                            <span className={`transition-transform duration-300 ${hoveredIndex === index ? 'rotate-180' : 'rotate-0'}`}>
+                                                <FaAngleDown />
+                                            </span>
+                                        )}
+                                    </Link>
+                                ) : (
+                                    <span className='flex items-center'>
+                                        {item.label}
+                                        {(item.label === 'Product' || item.label === 'Resources' || item.label === 'About Us') && (
+                                            <span className={`transition-transform duration-300 ${hoveredIndex === index ? 'rotate-180' : 'rotate-0'}`}>
+                                                <FaAngleDown />
+                                            </span>
+                                        )}
+                                    </span>
+                                )}
+                            </li>
+
+                            {item.label === 'Product' && hoveredIndex === index && (
+                                <div className="absolute top-full left-0 w-full shadow-lg z-10">
+                                    <ProductModal />
+                                </div>
+                            )}
+
+                            {item.label === 'Resources' && hoveredIndex === index && (
+                                <div className="absolute top-full left-0 w-full shadow-lg z-10">
+                                    <ResourcesModal />
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                <div className='hidden md:block'>
+                    <Joinbtn />
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default Navbar;
+
