@@ -17,6 +17,8 @@ export default {
         'custom-green': '#0B3424', // Add your custom color here
         'custom-light-green': '#F5FFDE',
         'customColor': '#F3F6F4',
+        'customLightGreen': '#F6F8F1',
+        'customGreen': '#0B3424',
       },
       transitionProperty: {
         'transform': 'transform',

@@ -1,14 +1,22 @@
 import React from 'react'
 import comparemenu from '../../assets/comparemenu.webp'
 import Joinbtn from '../../components/Joinbtn'
+import comparemenu2 from '../../assets/comparemenu2.webp'
+import comparemenu3 from '../../assets/comparemenu3.webp'
+import comparemenu4 from '../../assets/comparemenu4.webp'
+import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck, FaXmark } from "react-icons/fa6";
+
 
 const Compare = () => {
   return (
     <>
-      <div className='flex p-5 w-full'>
+
+      {/* first section 😃😃😃😃 */}
+      <div id='first-section' className='flex p-10 w-full mt-8 '>
         <div id='text' className='w-1/2 p-7 flex flex-col gap-4'>
 
-          <h1 class="font-[500] text-[4rem] leading-[1.2] text-left">
+          <h1 class="font-[500] text-[3rem] leading-[1.2] text-left">
             The only GPT-Powered<br />
             Experience for<br />
             E-commerce
@@ -26,19 +34,80 @@ const Compare = () => {
         </div>
       </div>
 
-      <div className='w-full'>
-        <h1>WHY LimeChat?</h1>
-        <div id='textwhylimechat' className=''>
-          <h1>Chatbots better than your best agents.</h1>
-          <p>
-            Confidently handle 90% of customer inquiries with the world’s first GPT-powered bot for commerce. Grow your brand without adding to your support team.
-          </p>
+
+      {/* second section😃✅✅✅✅ */}
+      <div id='second-section' className='p-8 mt-5'>
+        <h1 className='text-center text-4xl font-bold p-8'>WHY Verifytick?</h1>
+        <div className='flex w-full'>
+          <div id='textwhyVerifytick' className='w-1/2 p-16 flex flex-col gap-4'>
+            <h1 className='text-4xl font-medium leading-[1.2]'>Chatbots better than your best agents.</h1>
+            <p className='text-slate-600'>
+              Confidently handle 90% of customer inquiries with the world’s first GPT-powered bot for commerce. Grow your brand without adding to your support team.
+            </p>
+          </div>
+          <div id='compare2' className='w-1/2 bg-customColor rounded-3xl'>
+            <img src={comparemenu2} alt="" />
+          </div>
         </div>
 
-        <div id='imgylimechat' className=''>
 
-
+        {/* third section 😃✅✅😎😎😎 */}
+        <div id='third-section' className='w-full flex items-center gap-10 p-16'>
+          <div id='foraddimage' className='w-1/2 bg-customColor rounded-3xl'>
+            <img src={comparemenu3} alt="" />
+          </div>
+          <div id='textsection' className='w-1/2 p-20 text-wrap flex flex-col gap-4'>
+            <h1 className='text-4xl font-medium leading-[1.2]'>Improve Agent Productivity with AI Workflows</h1>
+            <p className='text-slate-600'>
+              Boost your team's efficiency—from order placement to tracking and returns. Utilize AI to personalize interactions and consistently provide exceptional customer experiences.
+            </p>
+          </div>
         </div>
+
+        {/* fourth section 😎😎✅✅😃😃😐😐🐎 */}
+
+        <div id='fourth-section' className='flex items-center w-full'>
+          <div id='textsection' className='w-1/2 p-20 text-wrap flex flex-col gap-4'>
+            <h1 className='text-4xl font-medium leading-[1.2]'>
+              Replace Meta Ads with Interactive WhatsApp<br /> Journeys
+            </h1>
+            <p className='text-slate-600'>
+              Transform acquisition, conversion, and retention with engaging two-way WhatsApp campaigns. Stop spamming and delight your customers on WhatsApp.
+            </p>
+          </div>
+          <div className='w-1/2 bg-customColor rounded-3xl'>
+            <img src={comparemenu4} alt="" />
+          </div>
+        </div>
+
+        {/* fifth section 🐎😐😃💸✅😎😎😎😂😂 */}
+        <div id='main' className='flex flex-col items-center justify-center py-10'>
+          <div className='text-4xl font-semibold mb-5'>Comparison</div>
+          <div className='grid grid-flow-col gap-10 border p-5 max-w-4xl w-full'>
+            <div id='left' className='flex flex-col space-y-4'>
+              <div>GPT-Powered Chatbot</div>
+              <div>AI CRM and Analytics</div>
+              <div>Advanced Bot Flows</div>
+              <div>iPhone Pop Ups</div>
+              <div>Non-Spammy Campaigns</div>
+            </div>
+            <div id='mid' className='flex flex-col space-y-4'>
+              <div>✅</div>
+              <div>✅</div>
+              <div>✅</div>
+              <div>✅</div>
+              <div>✅</div>
+            </div>
+            <div id='right' className='flex flex-col space-y-4'>
+              <div>❌</div>
+              <div>❌</div>
+              <div>❌</div>
+              <div>❌</div>
+              <div>❌</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </>
@@ -46,3 +115,102 @@ const Compare = () => {
 }
 
 export default Compare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className="py-10">
+  <div className="text-center mb-5 text-4xl font-semibold py-5">Comparison</div>
+  <div className='bg-white rounded-lg p-5 shadow-md px-4 mx-24'>
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className='flex justify-between'>
+          <td className="border-b text-gray-600 font-bold"></td>
+          <td className="border-b text-gray-600 font-bold border-2 border-gray-300">Verifytick</td>
+          <td className="border-b text-gray-600 font-bold">Others</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="py-2">GPT-Powered Chatbot</td>
+          <td className="py-2 border-2 border-gray-300">
+            <span id='check' className="bg-green-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaCheck className='text-white' />
+            </span>
+          </td>
+          <td className="py-2">
+            <span id='cross' className="bg-red-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaXmark className='text-white' />
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td className="py-2">AI CRM and Analytics</td>
+          <td className="py-2 border-2 border-gray-300">
+            <span id='check' className="bg-green-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaCheck className='text-white' />
+            </span>
+          </td>
+          <td className="py-2">
+            <span id='cross' className="bg-red-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaXmark className='text-white' />
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td className="py-2">Advanced Bot Flows</td>
+          <td className="py-2 border-2 border-gray-300">
+            <span id='check' className="bg-green-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaCheck className='text-white' />
+            </span>
+          </td>
+          <td className="py-2">
+            <span id='cross' className="bg-red-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaXmark className='text-white' />
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td className="py-2">iPhone Pop Ups</td>
+          <td className="py-2 border-2 border-gray-300">
+            <span id='check' className="bg-green-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaCheck className='text-white' />
+            </span>
+          </td>
+          <td className="py-2">
+            <span id='cross' className="bg-red-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaXmark className='text-white' />
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td className="py-2">Non-Spammy Campaigns</td>
+          <td className="py-2 border-2 border-gray-300">
+            <span id='check' className="bg-green-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaCheck className='text-white' />
+            </span>
+          </td>
+          <td className="py-2">
+            <span id='cross' className="bg-red-500 rounded-full w-5 h-5 flex justify-center items-center">
+              <FaXmark className='text-white' />
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> */}

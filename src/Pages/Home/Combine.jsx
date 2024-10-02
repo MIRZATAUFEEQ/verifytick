@@ -1,12 +1,18 @@
 import React from 'react'
 import Home from './Home'
 import SliderImage from './SliderImage'
+import ProductSuitCard from '../../components/ProductSuitCard/ProductSuitCard'
+import CustomerStories from './CustomerStories/CustomerStories'
+import HeroSection from '../../components/HeroSection/HeroSection'
 
 const Combine = () => {
   return (
     <div>
-        <Home/>
-        <SliderImage/>
+      <Home />
+      <SliderImage />
+      <ProductSuitCard />
+      <CustomerStories />
+      <HeroSection />
     </div>
   )
 }

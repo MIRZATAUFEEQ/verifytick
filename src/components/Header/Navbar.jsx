@@ -1,74 +1,3 @@
-// import React, { useState } from 'react';
-// import { FaAngleDown } from "react-icons/fa";
-// import logo from '../../assets/logo.avif';
-// import Joinbtn from '../Joinbtn';
-// import ProductModal from '../ModalBox/ProductModal'; // Import the Overview component
-
-// export const Navbar = () => {
-//     const [hoveredIndex, setHoveredIndex] = useState(null);
-
-//     const menuItems = [
-//         { label: 'Product' },
-//         { label: 'Pricing' },
-//         { label: 'Compare' },
-//         { label: 'Resources' },
-//         { label: 'About Us' },
-//     ];
-
-//     // Function to handle hover
-//     const handleMouseEnter = (index) => {
-//         setHoveredIndex(index);
-//     };
-
-//     const handleMouseLeave = () => {
-//         setHoveredIndex(null);
-//     };
-
-//     return (
-//         <>
-//             <div className='bg-white flex justify-around h-14 border items-center shadow-gray-500 sticky top-0'>
-//                 <div id='logo' className='text-xl font-black'>
-//                     <img src={logo} alt="Logo" />
-//                 </div>
-//                 <div id='navmenu' className='flex list-none gap-8 text-gray-500 text-base font-semibold sm:flex-row'>
-//                     {menuItems.map((item, index) => (
-//                         <div
-//                             key={index}
-//                             className='relative' // Make the parent relative for absolute positioning
-//                             onMouseEnter={() => handleMouseEnter(index)}
-//                             onMouseLeave={handleMouseLeave}
-//                         >
-//                             <li className='flex items-center hover:cursor-pointer'>
-//                                 {item.label}
-//                                 {/* Conditionally render the FaAngleDown icon only for 'Product', 'Resources', and 'About Us' */}
-//                                 {(item.label === 'Product' || item.label === 'Resources' || item.label === 'About Us') && (
-//                                     <span className={`transition-transform duration-300 ${hoveredIndex === index ? 'rotate-180' : 'rotate-0'}`}>
-//                                         <FaAngleDown />
-//                                     </span>
-//                                 )}
-//                             </li>
-
-//                             {/* Conditionally render the ProductModal component when hovering over the "Product" item */}
-//                             {item.label === 'Product' && hoveredIndex === index && (
-//                                 <div
-//                                     className="absolute top-full left-0 w-full shadow-lg z-10"
-//                                 >
-//                                     <ProductModal />
-//                                 </div>
-//                             )}
-//                         </div>
-//                     ))}
-//                 </div>
-//                 <div>
-//                     <Joinbtn />
-//                 </div>
-//             </div>
-//         </>
-//     );
-// };
-
-// export default Navbar;
-
 
 import React, { useState } from 'react';
 import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
@@ -104,10 +33,10 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className='bg-white flex justify-between md:justify-around h-24 border items-center shadow-gray-500 sticky top-0 z-50 px-4'>
+            <div className='bg-white flex justify-between md:justify-around h-14 border items-center shadow-gray-500 sticky top-0 z-50 px-4'>
                 <Link to='/'>
                     <div id='logo' className='text-xl font-black'>
-                        <img src={logo} alt="Logo" className='w-auto h-20 object-contain' />
+                        <img src={logo} alt="Logo" className='w-auto h-12 object-contain pt-1 pb-1' />
                     </div>
                 </Link>
 
