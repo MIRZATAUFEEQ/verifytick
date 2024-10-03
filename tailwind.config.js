@@ -19,6 +19,7 @@ export default {
         'customColor': '#F3F6F4',
         'customLightGreen': '#F6F8F1',
         'customGreen': '#0B3424',
+        'customGray': '#F3F6F4',
       },
       transitionProperty: {
         'transform': 'transform',

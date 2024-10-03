@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from '../../assets/logo.png';
 import Joinbtn from '../Joinbtn';
 import ProductModal from '../ModalBox/ProductModal';
 import ResourcesModal from '../ModalBox/ResourcesModal';
+import AboutusModal from '../ModalBox/AboutusModal'; // Import AboutusModal
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -13,10 +13,10 @@ export const Navbar = () => {
 
     const menuItems = [
         { label: 'Product' },
-        { label: 'Pricing', path: '/pricing' }, // Added path for Pricing
-        { label: 'Compare', path: '/compare' }, // Added path for Compare
+        { label: 'Pricing', path: '/pricing' }, 
+        { label: 'Compare', path: '/compare' }, 
         { label: 'Resources' },
-        { label: 'About Us' },
+        { label: 'About Us' }, // "About Us" item
     ];
 
     const handleMouseEnter = (index) => {
@@ -91,6 +91,12 @@ export const Navbar = () => {
                                     <ResourcesModal />
                                 </div>
                             )}
+
+                            {item.label === 'About Us' && hoveredIndex === index && ( // Show About Us modal
+                                <div className="absolute top-full left-0 w-full shadow-lg z-10">
+                                    <AboutusModal />
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -104,4 +110,3 @@ export const Navbar = () => {
 };
 
 export default Navbar;
-

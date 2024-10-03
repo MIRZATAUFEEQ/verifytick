@@ -47,14 +47,17 @@ const ProductModal = () => {
 
                 {/* Support Section */}
                 <div id='support' className='flex flex-col gap-4 md:gap-2 w-full md:w-auto bg-white p-4 rounded-lg'>
-                    <div id='supportimg' className='p-4 md:p-2 w-full md:w-55 flex flex-col gap-2 border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50'>
-                        <span className='text-black'>SUPPORT</span>
-                        <img src={support} alt="Support" className='h-28 w-full md:w-52 rounded-lg' />
-                        <div className='flex items-center text-black gap-4'>
-                            <span>Support Overview</span>
-                            <span><FaAngleRight /></span>
+                    <Link to='/support'>
+
+                        <div id='supportimg' className='p-4 md:p-2 w-full md:w-55 flex flex-col gap-2 border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50'>
+                            <span className='text-black'>SUPPORT</span>
+                            <img src={support} alt="Support" className='h-28 w-full md:w-52 rounded-lg' />
+                            <div className='flex items-center text-black gap-4'>
+                                <span>Support Overview</span>
+                                <span><FaAngleRight /></span>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     <div className='flex gap-3 flex-col'>
                         <div className='p-2 border border-transparent hover:border-cyan-200 hover:cursor-pointer rounded-lg hover:bg-cyan-50'>
                             <span className='h-5 w-5 rounded-full border border-black'>0</span>

@@ -1,6 +1,6 @@
 import React from 'react';
-import Joinbtn from '../Joinbtn';
-import heroSection2 from '../../assets/heroSection2.png';
+import Joinbtn from '../../../components/Joinbtn';
+import heroSection2 from '../../../assets/heroSection2.png';
 
 const HeroSection = () => {
     return (
@@ -14,8 +14,8 @@ const HeroSection = () => {
                         <Joinbtn />
                     </div>
                 </div>
-                <div className="flex-1 bg-cover bg-center lg:rounded-l-full overflow-hidden">
-                    <img src={heroSection2} className='w-full h-full object-cover' alt="" />
+                <div className="flex-1 bg-cover bg-center overflow-hidden">
+                    <img src={heroSection2} className='w-full lg:rounded-l-full h-full object-cover' alt="" />
                 </div>
             </div>
         </div>

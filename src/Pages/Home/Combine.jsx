@@ -3,7 +3,7 @@ import Home from './Home'
 import SliderImage from './SliderImage'
 import ProductSuitCard from '../../components/ProductSuitCard/ProductSuitCard'
 import CustomerStories from './CustomerStories/CustomerStories'
-import HeroSection from '../../components/HeroSection/HeroSection'
+import HeroSection from './HeroSection/HeroSection'
 
 const Combine = () => {
   return (
@@ -12,7 +12,7 @@ const Combine = () => {
       <SliderImage />
       <ProductSuitCard />
       <CustomerStories />
-      <HeroSection />
+      {/* <HeroSection /> */}
     </div>
   )
 }

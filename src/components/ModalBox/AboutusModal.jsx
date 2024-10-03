@@ -1,40 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const ResourcesModal = () => {
-    return (
-
-        <>
-
+const AboutusModal = () => {
+  return (
+    <>
+           
             <div class=" w-[34rem] bg-white shadow-md rounded-md p-2 max-w-xs">
                 <ul class="space-y-3">
                     <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <Link to='/customerstories'>
-                            <li class="text-gray-700">Customer Stories</li>
-                        </Link>
-                    </div>
-
-                    <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <Link to='/integration'>
-                            <li class="text-gray-700">Integrations</li>
-                        </Link>
+                        <li class="text-gray-700">Our Story</li>
                     </div>
                     <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">News</li>
+                        <li class="text-gray-700">About Level-3 AI</li>
                     </div>
                     <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">Blog</li>
+                        <li class="text-gray-700">Partner with Us</li>
                     </div>
                     <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">Guides</li>
+                        <li class="text-gray-700">Why Verifytick</li>
                     </div>
+                    <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
+                        <li class="text-gray-700">Careers</li>
+                    </div>
+                  
                 </ul>
             </div>
 
 
         </>
-    )
-
+  )
 }
 
-export default ResourcesModal
+export default AboutusModal

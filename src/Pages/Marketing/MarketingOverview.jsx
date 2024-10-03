@@ -8,6 +8,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { RiRobot3Line } from "react-icons/ri";
 import { MdCountertops } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io5";
+import HeroSection from '../Home/HeroSection/HeroSection';
 
 const MarketingOverview = () => {
     return (
@@ -148,6 +149,9 @@ const MarketingOverview = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <HeroSection/>
             </div>
         </>
     )
