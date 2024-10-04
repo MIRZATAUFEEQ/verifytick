@@ -2,26 +2,26 @@
 
 import React, { useState, useEffect } from 'react';
 import heroimg1 from '../../assets/heroimg1.webp';
-import heroimg2 from '../../assets/heroimg2.jpg';
-import heroimg3 from '../../assets/heroimg3.jpg';
-import heroimg4 from '../../assets/heroimg4.jpg';
-import heroimg5 from '../../assets/heroimg5.jpg';
-import heroimg6 from '../../assets/heroimg6.jpg';
-import heroimg7 from '../../assets/heroimg7.jpg';
-import heroimg8 from '../../assets/heroimg8.jpg';
-import heroimg9 from '../../assets/heroimg9.jpg';
+import whatsapp2 from '../../assets/whatsapp2.png';
+import whatsapp3 from '../../assets/whatsapp3.png';
+import whatsapp4 from '../../assets/whatsapp4.png';
+import whatsapp5 from '../../assets/whatsapp5.png';
+import whatsapp6 from '../../assets/whatsapp6.png';
+import whatsapp7 from '../../assets/whatsapp7.png';
+import whatsapp8 from '../../assets/whatsapp8.png';
+import whatsapp9 from '../../assets/whatsapp9.png';
 
 // List of images
 const images = [
   heroimg1,
-  heroimg2,
-  heroimg3,
-  heroimg4,
-  heroimg5,
-  heroimg6,
-  heroimg7,
-  heroimg8,
-  heroimg9,
+  whatsapp2,
+  whatsapp3,
+  whatsapp4,
+  whatsapp5,
+  whatsapp6,
+  whatsapp7,
+  whatsapp8,
+  whatsapp9,
 ];
 
 // ImageSlider component

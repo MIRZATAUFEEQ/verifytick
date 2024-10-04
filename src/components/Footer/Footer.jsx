@@ -5,6 +5,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"; // Icons for collapse/expand
 import Logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const [showProducts, setShowProducts] = useState(false);
@@ -115,7 +116,10 @@ export default function Footer() {
                 <div className='flex flex-col md:flex-row justify-between items-center h-auto md:h-10 p-4'>
                     <div className='flex flex-col md:flex-row gap-3 mb-4 md:mb-0'>
                         <li className='list-none text-black hover:cursor-pointer'>Data Policy</li>
+                       <Link to='/privacypolicy'>
+                       
                         <li className='list-none text-black hover:cursor-pointer'>Privacy Policy</li>
+                       </Link>
                         <li className='list-none text-black hover:cursor-pointer'>Service Level Agreement</li>
                         <li className='list-none text-black hover:cursor-pointer'>Terms of Service</li>
                     </div>

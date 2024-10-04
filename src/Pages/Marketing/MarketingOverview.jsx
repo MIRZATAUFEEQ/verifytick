@@ -6,9 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { FaDatabase } from "react-icons/fa";
 import { HiSpeakerphone } from "react-icons/hi";
 import { RiRobot3Line } from "react-icons/ri";
-import { MdCountertops } from "react-icons/md";
+// import { MdCountertops } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import HeroSection from '../Home/HeroSection/HeroSection';
+import { Link } from 'react-router-dom';
 
 const MarketingOverview = () => {
     return (
@@ -22,13 +23,14 @@ const MarketingOverview = () => {
                     <span>Our Marketing Suite</span>
                 </div>
                 <div className='flex flex-wrap gap-10 w-full p-8 justify-center'>
+                    <Link to='/whatsappmarketing'>
                     <div className="hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 bg-gray-200 border border-transparent rounded-lg flex gap-16 flex-col p-8 items-start transition-all duration-200 ease-out w-80 h-80 shadow-sm hover:shadow-lg">
                         <div>
                             <span className='text-5xl'>
                                 <MdOutlineUsb className='bg-cyan-300 border border-transparent rounded-full p-1' />
                             </span>
                             <span className='text-2xl font-semibold'>
-                                Conversation Flow
+                                Whatsapp Marketing
                             </span>
                             <p className='pt-4 text-custom-green'>
                                 Improve return on ad spend with WhatsApp Retargeting
@@ -43,13 +45,14 @@ const MarketingOverview = () => {
                             </span>
                         </div>
                     </div>
+                    </Link>
                     <div className="hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 gap-2 bg-gray-200 border border-transparent rounded-lg flex flex-col justify-between items-start p-8 transition-all duration-200 ease-out w-80 h-80 shadow-sm hover:shadow-lg">
                         <div>
                             <span className='text-5xl'>
                                 <HiSpeakerphone className='bg-cyan-300 border border-transparent rounded-full p-1' />
                             </span>
                             <span className='text-2xl font-semibold'>
-                                Campaigns and Broadcasts
+                                Whatsapp Chatbot
                             </span>
                             <p className='text-custom-green'>
                                 Enhance retention with engaging, non-spammy 2-way WhatsApp campaigns with WhatsApp Retargeting
@@ -106,27 +109,7 @@ const MarketingOverview = () => {
                             </span>
                         </div>
                     </div>
-                    <div className="hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 gap-x-4 gap-y-4 bg-gray-200 border border-transparent rounded-lg flex flex-col justify-between items-start p-8 transition-all duration-200 ease-out w-80 h-80 shadow-sm hover:shadow-lg">
-                        <div>
-                            <span className='text-5xl'>
-                                <MdCountertops className='bg-cyan-300 border border-transparent rounded-full p-1' />
-                            </span>
-                            <span className='text-2xl font-semibold'>
-                                RTO Reduction Flows
-                            </span>
-                            <p className='text-custom-green'>
-                                Manage Return-to-Origin effectively through WhatsApp
-                            </p>
-                        </div>
-                        <div className='flex justify-center items-center'>
-                            <span>
-                                learn more
-                            </span>
-                            <span>
-                                <FaArrowRightLong />
-                            </span>
-                        </div>
-                    </div>
+                    
                     <div className="hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 gap-x-4 gap-y-4 bg-gray-200 border border-transparent rounded-lg flex flex-col justify-between items-start p-8 transition-all duration-200 ease-out w-80 h-80 shadow-sm hover:shadow-lg">
                         <div>
                             <span className='text-5xl'>

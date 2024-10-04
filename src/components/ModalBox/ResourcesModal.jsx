@@ -19,15 +19,7 @@ const ResourcesModal = () => {
                             <li class="text-gray-700">Integrations</li>
                         </Link>
                     </div>
-                    <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">News</li>
-                    </div>
-                    <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">Blog</li>
-                    </div>
-                    <div className='border border-transparent hover:border-cyan-200 rounded-lg hover:bg-cyan-50 hover:cursor-pointer'>
-                        <li class="text-gray-700">Guides</li>
-                    </div>
+                  
                 </ul>
             </div>
 
