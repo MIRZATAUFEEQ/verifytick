@@ -11,26 +11,20 @@ const IntegrationMain = () => {
         <>
             <IntegrationHerosectino />
 
-            <div className="flex justify-between px-20 items-center rounded-lg p-10 w-full bg-gray-100 shadow-md">
-                <ul className="list-none p-0 m-0 mb-5">
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Online Stores</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Payment and Checkout</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Logistics</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Marketing</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Channels</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Customer Service and CRM</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Calling Services</li>
-                    <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Other Integrations</li>
-                </ul>
-                <div className='h-96 overflow-scroll scroll-smooth'>
-                    <div>
-                        <OnlineStore />
-                    </div>
-                    <div>
-                        <Payment_checkout />
-                    </div>
+            <div className="flex flex-col md:flex-row justify-between px-5 md:px-20 items-center rounded-lg p-5 md:p-10 w-full bg-gray-100 shadow-md">
+            <ul className="list-none p-0 m-0 mb-5 flex flex-col md:flex-row">
+                <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Online Stores</li>
+                <li className="text-gray-600 py-2 text-lg hover:text-black hover:cursor-pointer">Payment and Checkout</li>
+            </ul>
+            <div className='h-96 overflow-scroll scroll-smooth w-full'>
+                <div>
+                    <OnlineStore />
+                </div>
+                <div>
+                    <Payment_checkout />
                 </div>
             </div>
+        </div>
             <HeroSection />
         </>
     );

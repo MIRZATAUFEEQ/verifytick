@@ -9,10 +9,10 @@ const Combine = () => {
   return (
     <div>
       <Home />
-      <SliderImage />
+      {/* <SliderImage /> */}
       <ProductSuitCard />
       <CustomerStories />
-      {/* <HeroSection /> */}
+      <HeroSection />
     </div>
   )
 }

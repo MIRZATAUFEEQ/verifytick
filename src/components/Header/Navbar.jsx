@@ -6,15 +6,29 @@ import ProductModal from '../ModalBox/ProductModal';
 import ResourcesModal from '../ModalBox/ResourcesModal';
 import AboutusModal from '../ModalBox/AboutusModal'; // Import AboutusModal
 import { Link } from 'react-router-dom';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
 
 export const Navbar = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Animation code 
+    useGSAP(() => {
+        gsap.from('#animation', {
+            y: -20,
+            // scrub:true,
+            duration: 1
+
+        })
+    })
+
+
+
     const menuItems = [
         { label: 'Product' },
-        { label: 'Pricing', path: '/pricing' }, 
-        { label: 'Compare', path: '/compare' }, 
+        { label: 'Pricing', path: '/pricing' },
+        { label: 'Compare', path: '/compare' },
         { label: 'Resources' },
         { label: 'About Us' }, // "About Us" item
     ];
@@ -49,7 +63,7 @@ export const Navbar = () => {
                 <div
                     id='navmenu'
                     className={`${isMenuOpen ? 'flex' : 'hidden'
-                        } md:flex flex-col md:flex-row list-none gap-4 md:gap-8 text-gray-500 text-base font-semibold sm:flex-row absolute md:relative top-14 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none md:top-0`}
+                        } md:flex flex-col md:flex-row list-none gap-6 md:gap-8 text-gray-500 text-base font-semibold sm:flex-row absolute md:relative top-14 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none md:top-0`}
                 >
                     {menuItems.map((item, index) => (
                         <div
@@ -57,6 +71,7 @@ export const Navbar = () => {
                             className='relative'
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={handleMouseLeave}
+                            id='animation'
                         >
                             <li className='flex items-center hover:cursor-pointer p-4 md:p-0'>
                                 {item.path ? (

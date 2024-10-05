@@ -1,5 +1,16 @@
 import React from 'react'
-import { SiWoocommerce } from "react-icons/si";
+// import { SiWoocommerce } from "react-icons/si";
+import Magentologo from '../../assets/Magentologo.png'
+import woocommercelogo from '../../assets/woocommercelogo.png'
+import shopifylogo from '../../assets/shopifylogo.png'
+import dukaanlogo from '../../assets/dukaanlogo.png'
+import farziengineerlogo from '../../assets/farziengineerlogo.png'
+import stripelogo from '../../assets/stripelogo.png'
+import clickpostlogo from '../../assets/clickpostlogo.png'
+import pickrrlogo from '../../assets/pickrrlogo.png'
+import shopflologo from '../../assets/shopflologo.png'
+import payulogo from '../../assets/payulogo.png'
+
 
 const IntegrationHerosectino = () => {
     return (
@@ -20,50 +31,50 @@ const IntegrationHerosectino = () => {
                         {/* Right Section (Logo Grid) */}
                         <div className="mt-8 lg:mt-0 lg:w-1/2 grid grid-cols-3 gap-6 items-center">
                             {/* Add your logos here */}
-                            {/* <img
-                                src={<SiWoocommerce/>}
+                            <img
+                                src={woocommercelogo}
                                 alt="WooCommerce"
                                 className="h-12 mx-auto"
-                            /> */}
-                            <span className="h-12 mx-auto"><SiWoocommerce className='text-8xl'/></span>
+                            />
+                            {/* <span className="h-12 mx-auto"></span> */}
                             <img
-                                src="https://seeklogo.com/images/M/magento-logo-240B2F5AA3-seeklogo.com.png"
+                                src={Magentologo}
                                 alt="Magento"
                                 className="h-12 mx-auto"
                             />
                             <img
-                                src="https://dukaan.io/images/logo.svg"
+                                src={dukaanlogo}
                                 alt="Dukaan"
                                 className="h-12 mx-auto"
                             />
                             <img
-                                src="https://ncommerce.com/nc-logo.png"
-                                alt="NCommerce"
+                                src={stripelogo}
+                                alt="Stripe"
                                 className="h-12 mx-auto"
                             />
                             <img
-                                src="https://clickpost.ai/assets/images/clickpost-logo-dark.svg"
+                                src={clickpostlogo}
                                 alt="ClickPost"
                                 className="h-12 mx-auto"
                             />
                             <img
-                                src="https://pickrr.com/img/pickrr-logo.png"
+                                src={payulogo}
+                                alt="Payu"
+                                className="h-12 mx-auto"
+                            />
+                            <img
+                                src={shopifylogo}
+                                alt="Shopify"
+                                className="h-12 mx-auto"
+                            />
+                            <img
+                                src={pickrrlogo}
                                 alt="Pickrr"
                                 className="h-12 mx-auto"
                             />
                             <img
-                                src="https://shopflo.io/images/logo.svg"
+                                src={shopflologo}
                                 alt="Shopflo"
-                                className="h-12 mx-auto"
-                            />
-                            <img
-                                src="https://simpl.com/logo.png"
-                                alt="Simpl"
-                                className="h-12 mx-auto"
-                            />
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/4/41/Stripe_Logo%2C_revised_2016.svg"
-                                alt="Stripe"
                                 className="h-12 mx-auto"
                             />
                         </div>

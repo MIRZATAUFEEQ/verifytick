@@ -1,11 +1,12 @@
 import React from 'react'
-import comparemenu from '../../assets/comparemenu.webp'
 import Joinbtn from '../../components/Joinbtn'
-import comparemenu2 from '../../assets/comparemenu2.webp'
-import comparemenu3 from '../../assets/comparemenu3.webp'
-import comparemenu4 from '../../assets/comparemenu4.webp'
-import { FaCheckCircle } from "react-icons/fa";
-import { FaCheck, FaXmark } from "react-icons/fa6";
+import comparemenu from '../../assets/comparemenu.png'
+import comparemenu2 from '../../assets/comparemenu2.png'
+import comparemenu3 from '../../assets/comparemenu3.png'
+import comparemenu4 from '../../assets/comparemenu4.png'
+import HeroSection from '../Home/HeroSection/HeroSection'
+// import { FaCheckCircle } from "react-icons/fa";
+// import { FaCheck, FaXmark } from "react-icons/fa6";
 
 
 const Compare = () => {
@@ -81,7 +82,7 @@ const Compare = () => {
         {/* fifth section */}
         <div id='main' className='flex flex-col items-center justify-center py-10'>
           <div className='text-2xl md:text-4xl font-semibold mb-5'>Comparison</div>
-          <div className='grid grid-cols-1 md:grid-flow-col gap-5 md:gap-10 border p-5 max-w-4xl w-full'>
+          <div className='flex gap-20'>
             <div id='left' className='flex flex-col space-y-4'>
               <div>GPT-Powered Chatbot</div>
               <div>AI CRM and Analytics</div>
@@ -107,8 +108,13 @@ const Compare = () => {
         </div>
 
       </div>
+      <div>
+        <HeroSection/>
+      </div>
     </>
   )
 }
 
 export default Compare
+
+// grid grid-cols-1 md:grid-flow-col gap-5 md:gap-10 border p-5 max-w-4xl w-full

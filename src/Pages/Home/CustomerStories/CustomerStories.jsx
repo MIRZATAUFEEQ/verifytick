@@ -1,5 +1,5 @@
 import React from 'react';
-import herosection1 from '../../../assets/herosection1.png';
+import herosection1 from '../../../assets/herosection1.jpeg';
 import { FaArrowRightLong } from "react-icons/fa6";
 import HeroSection from '../HeroSection/HeroSection';
 
@@ -73,10 +73,9 @@ const CustomerStories = () => {
           </div>
         </div>
       </div>
-
-      <div>
-        <HeroSection />
-      </div>
+<div>
+  <HeroSection/>
+</div>
     </>
   );
 }

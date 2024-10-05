@@ -11,9 +11,11 @@ const ProductSuitCard = () => {
                 <h1 className='text-3xl md:text-4xl font-medium leading-tight text-center p-4 md:p-5'>
                     Verifytick Product Suite
                 </h1>
-                <div className='flex flex-col md:flex-row justify-center gap-5'>
+                <div className='flex flex-col md:flex-row justify-center gap-6 items-center '>
 
-                    <Link to=''>
+                    {/* write support suit card code here */}
+                    <Link to='#'>
+
                         <div className="border-cyan-200 hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 bg-gray-200 border border-transparent rounded-lg flex gap-4 md:gap-16 flex-col p-6 md:p-8 items-start transition-all duration-200 ease-out w-72 md:w-80 h-auto md:h-80 shadow-sm hover:shadow-lg mx-auto">
                             <div>
                                 <span className='text-4xl md:text-5xl'>
@@ -36,6 +38,7 @@ const ProductSuitCard = () => {
                             </div>
                         </div>
                     </Link>
+
 
                     <Link to='/marketing'>
                         <div className="border-cyan-200 hover:border-cyan-200 hover:cursor-pointer hover:bg-cyan-50 bg-gray-200 border border-transparent rounded-lg flex gap-4 md:gap-16 flex-col p-6 md:p-8 items-start transition-all duration-200 ease-out w-72 md:w-80 h-auto md:h-80 shadow-sm hover:shadow-lg mx-auto">

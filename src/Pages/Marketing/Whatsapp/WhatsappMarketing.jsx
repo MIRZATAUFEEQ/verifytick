@@ -1,7 +1,8 @@
 import React from 'react'
 import Joinbtn from '../../../components/Joinbtn'
-import headerimg from '../../../assets/headerimg.webp'
+import headerimg from '../../../assets/headerimg.png'
 import whatsapp2 from '../../../assets/whatsapp2.png'
+import HeroSection from '../../Home/HeroSection/HeroSection'
 
 const WhatsappMarketing = () => {
     return (
@@ -16,7 +17,7 @@ const WhatsappMarketing = () => {
                         <p className='py-5 text-sm md:text-base'>
                             Connect with your customers on their favorite platform—WhatsApp. Turn leads into loyal customers through personalized, real-time conversations with our WhatsApp Marketing Software.
                         </p>
-                        <div className='w-[10rem] md:w-[12rem]'>
+                        <div className='w-[10rem] md:w-[10rem]'>
                             <Joinbtn />
                         </div>
                     </div>
@@ -60,6 +61,9 @@ const WhatsappMarketing = () => {
                         <img src={whatsapp2} alt="WhatsApp" />
                     </div>
                 </div>
+            </div>
+            <div>
+                <HeroSection/>
             </div>
         </>
     )

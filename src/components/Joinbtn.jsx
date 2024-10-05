@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Joinbtn() {
     return (
         <>
-            {/* <a href="https://app.verifytick.io/dashboard" target='blank'> */}
-            <Link to='/contact'>
+            <a href="https://app.verifytick.io/dashboard" target='blank'>
+            {/* <Link to='/contact'> */}
             
              <div
                 id='nav-button'
@@ -18,9 +18,9 @@ export default function Joinbtn() {
                     </span>
                 </button>
             </div>
-                </Link>
+                {/* </Link> */}
 
-            {/* </a> */}
+            </a>
         </>
     )
 }

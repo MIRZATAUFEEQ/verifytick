@@ -1,6 +1,6 @@
 import React from 'react';
 import Joinbtn from '../../../components/Joinbtn';
-import heroSection2 from '../../../assets/heroSection2.png';
+import heroSection2 from '../../../assets/heroSection2.jpeg';
 
 const HeroSection = () => {
     return (

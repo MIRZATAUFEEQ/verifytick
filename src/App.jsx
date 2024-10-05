@@ -9,9 +9,8 @@ import Compare from './Pages/Compare/Compare'
 import Pricing from './Pages/Pricing/Pricing'
 import CustomerStories from './Pages/Home/CustomerStories/CustomerStories'
 import IntegrationMain from './Pages/Integration/IntegrationMain'
-import Contact from './Pages/ContactForm/Contact'
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
-import Support from './Pages/Support/Support'
+// import Support from './Pages/Support/Support'
 import WhatsappMarketing from './Pages/Marketing/Whatsapp/WhatsappMarketing'
 import OurStory from './Pages/AboutUs/OurStory'
 
@@ -30,14 +29,10 @@ function App() {
             <Route exact path='/pricing' element={<Pricing />} />
             <Route exact path='/customerstories' element={<CustomerStories />} />
             <Route exact path='/Integration' element={<IntegrationMain />} />
-            <Route exact path='/contact' element={<Contact />} />
             <Route exact path='/privacypolicy' element={<PrivacyPolicy />} />
-            <Route exact path='/support' element={<Support />} />
+            {/* <Route exact path='/support' element={<Support />} /> */}
             <Route exact path='/whatsappmarketing' element={<WhatsappMarketing />} />
             <Route exact path='/ourstory' element={<OurStory />} />
-
-
-
             
           </Routes>
           <Footer />
