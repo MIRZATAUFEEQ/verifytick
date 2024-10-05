@@ -73,9 +73,7 @@ const CustomerStories = () => {
           </div>
         </div>
       </div>
-<div>
-  <HeroSection/>
-</div>
+
     </>
   );
 }
